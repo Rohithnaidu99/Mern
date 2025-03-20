@@ -1,0 +1,31 @@
+Event Loop is a core part of the Node.js runtime that enables asynchronous, non-blocking operations.
+ //It is responsible for handling all asynchronous operations in Node.js and allows the execution of JavaScript code, performing I/O operations, and managing concurrency without creating multiple threads.
+
+How does it works ?
+ //Node.js operates on a single-threaded event-driven architecture. This means that although Node.js uses a single thread to execute JavaScript code, 
+   //it can still handle multiple I/O operations simultaneously through its event-driven, non-blocking architecture. The event loop is at the heart of this.
+
+>Call Stack: The event loop interacts with the call stack, where synchronous code (regular JavaScript) gets executed. 
+              //When a function is invoked, it is pushed onto the stack, and when it completes, it is popped off the stack.
+
+>Callback Queue (Task Queue): When an asynchronous operation like a file system read, database query, or network request completes,
+                              // its associated callback function is added to the callback queue.
+
+>Event Loop: The event loop continuously checks the call stack to see if it is empty.
+            // If the stack is empty, the event loop picks the first callback from the callback queue and pushes it onto the stack for execution.
+              // If the call stack is not empty, the event loop waits until the current operations complete.
+
+>Phases of the Event Loop: The event loop is divided into different phases, each with a specific purpose. 
+                   //Each phase has a callback queue associated with it, and the event loop processes the callbacks in these queues in order.
+                    // like -Timers Phase,Pending Callbacks,Idle, Prepare ,Poll Phase, Check Phase
+
+>Microtask Queue: There’s also a micro task queue, which holds promises and other micro tasks like process.nextTick(). 
+          //Micro tasks are processed immediately after the currently executing task completes, but before the event loop moves on to the next phase.
+
+
+
+Key Features of the Event Loop:
+>Single-threaded: Node.js uses a single thread for JavaScript execution, but the event loop enables it to handle multiple concurrent operations.
+>Non-blocking I/O: Time-consuming tasks (like reading a file or making network requests) are delegated to the event loop, freeing the main thread to handle other tasks.
+>Phases: The event loop operates in different phases, handling timers, I/O, and other callbacks in an orderly manner.
+>Microtask Queue: Microtasks (like promises and process.nextTick) have higher priority and are executed right after the current operation completes but before moving to the next event loop phase.

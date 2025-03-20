@@ -1,0 +1,46 @@
+ Div is known for the content division element. It is a generic block-level element in HTML.
+
+ https://www.javatpoint.com/css-center-tag
+
+ <!DOCTYPE html>  
+<html lang="en">  
+<head>  
+ <meta charset="UTF-8">  
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+ <title>Document</title>  
+ <style>  
+  body {  
+ margin: 0;  
+ padding: 0;  
+}  
+  
+/* Apply styles to the parent container */  
+.container {  
+ display: flex;  
+ justify-content: center; /* Center horizontally */  
+ align-items: center; /* Center vertically */  
+ height: 100vh; /* This ensures the container takes up the full viewport height */  
+}  
+  
+/* Styles for the centered div */  
+.centered-div {  
+ padding: 20px;  
+ border: 2px solid #333;  
+ background-color: #f2f2f2;  
+ text-align: center;  
+}  
+  
+ </style>  
+</head>  
+<body>  
+ <div class="container">  
+  <div class="centered-div">  
+   <h3>Welcome to javaTpoint</h3>  
+   <p>This is the example of center div tag in both horizontally and vertically</p>  
+  </div>  
+ </div>  
+   
+</body>  
+</html>  
+
+

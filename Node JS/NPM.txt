@@ -1,0 +1,8 @@
+Node Package Manager allows developers to install, share, and manage dependencies (libraries or modules) in their Node.js applications.
+
+Key Features of NPM:
+>Package Management: NPM provides a huge repository of open-source libraries and packages that developers can easily integrate into their projects.
+>Version Control: NPM manages versions of packages, allowing developers to specify which version they want to use or ensure compatibility with their projects.
+>Dependency Management: NPM handles the installation of packages and their dependencies, ensuring everything required for a package to run is included.
+>Scripts: You can define custom scripts in your package.json file to automate tasks such as running tests, building projects, or starting servers.
+>Global vs Local Packages: Packages can be installed globally (for use across multiple projects) or locally (specific to a project).

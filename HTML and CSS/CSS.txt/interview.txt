@@ -1,0 +1,25 @@
+What is the difference between display: none and visibility: hidden?
+visibility:hidden hides the element, but it still takes up space in the layout.
+display:none removes the element from the document. It does not take up any space.
+
+What are CSS Combinator?
+A combinator is something that explains the relationship between the selectors.
+
+what is cascading in css?
+In CSS, cascading refers to the idea that styling rules come from multiple sources and that styles with higher precedence overwrite those with lower precedence.
+
+What is The Viewport?
+The viewport is the user's visible area of a web page.The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.
+
+In what ways CSS can be added in HTML?
+CSS can be added to HTML documents in 3 ways:
+Inline - by using the style attribute inside HTML elements
+Internal - by using a <style> element in the <head> section
+External - by using a <link> element to link to an external CSS file
+
+what is Float property in CSS?
+The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it.
+
+What is tweening?
+It is the process of generating intermediate frames between two images.
+

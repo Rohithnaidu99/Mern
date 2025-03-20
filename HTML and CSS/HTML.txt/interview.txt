@@ -1,0 +1,20 @@
+what is DOCTYPE?
+A doctype or document-type declaration is an instruction that tells the web browser about the markup language in which the current page is written.
+
+What is the difference between <em> and <i> tags?
+<i> tag: It is one of the elements of HTML which is used in formatting HTML texts. It is used to define a text in technical terms, alternative mood or voice, a thought, etc.
+<em> tag: It is also one of the elements of HTML used in formatting texts. It is used to define emphasized text or statements
+
+what is use of dangerouslysetinnerhtml?
+DangerouslySetInnerHTML is a React property that allows developers to programmatically set the content of HTML elements in a React application.
+ // It's a replacement for the browser DOM's innerHTML, and is useful for rendering dynamic HTML markups that can be retrieved from an external API.
+
+ What are tags and attributes in HTML?
+//Tags are the primary component of the HTML that defines how the content will be structured/ formatted, 
+   //whereas Attributes are used along with the HTML tags to define the characteristics of the element. 
+
+What is the difference between progress and meter tag?
+The progress tag is used to represent the progress of the task only while the meter tag is used to measure data within a given range.
+
+
+

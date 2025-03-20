@@ -1,0 +1,22 @@
+Element tells the browser what to display.An HTML element is defined by a start tag, some content, and an end tag.
+<tagname>Content goes here...</tagname>
+Eg-<h1>My First Heading</h1>
+
+While an attribute defines how an element behaves.Attributes provide additional information about elements.
+  //Attributes are always specified in the start tag
+Eg- href , Src img, title.
+
+HTML tags are like keywords which defines that how web browser will format and display the content. 
+ //With the help of tags, a web browser can distinguish between an HTML content and a simple content.
+
+Eg-<tag> content </tag>
+
+HTML <meta> tag is used to represent the metadata about the HTML document. It specifies page description, keywords, copyright, language, author of the documents, etc.
+ //The metadata does not display on the webpage, but it is used by search engines, browsers and other web services which scan the site or webpage to know about the webpage.
+
+Class Vs ID
+Class -We can apply a class to various elements so that it could be numerous times on a single page.
+        starts with . 
+ID - The Id is unique in a page, and we can only apply it to one specific element.
+       starts with #
+

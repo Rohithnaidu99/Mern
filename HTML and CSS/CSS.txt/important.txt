@@ -1,0 +1,36 @@
+Opacity -The CSS opacity property is used to specify the (transparency) of an element. 
+          //In simple word, you can say that it specifies the clarity of the image.
+
+Filter - CSS filters are used to set visual effects to text, images, and other aspects of a webpage.
+         //The CSS filter property allows us to access the effects such as color or blur, shifting on the rendering of an element before the element gets displayed. 
+Filter: none | invert() | drop-shadow() | brightness() | saturate() | blur() | hue-rotate() | contrast() | opacity() | grey scale() | sepia() | url(); 
+
+Overflow Property -
+visible -	It specifies that overflow is not clipped and renders the element outside its box. It is the default value of the CSS overflow property.
+hidden -	It specifies that the overflow is clipped, and rest of the content will be invisible.
+scroll	- It specifies that the overflow is clipped, and a scroll bar is used to see the rest of the content.
+Clip -	It specifies that if overflow is clipped, then the rest of the content will be clipped.
+auto- It specifies that if overflow is clipped, a scroll bar is needed to see the rest of the content.
+inherit	- It inherits the property from its parent element.
+initial - It is used to set the property to its initial value.
+
+CSS Padding property  - is used to define the space between the element content and the element border.
+
+pseudo-classes - pseudo-classes are used to add styles to selectors, but only when those selectors meet certain conditions
+                 //A pseudo class is expressed by adding a colon (:) after a selector in CSS, followed by a pseudo-class such as "hover", "focus", or "active", like this: a:hover
+    a:link {} , a:visited {} , a:hover {} , a:active {}
+
+radial-gradient() function- If you want to create an attractive background, you can do so with the help of a CSS function called radial-gradient().
+
+CSS Z-Index - The stacking order of components on a web page is usually managed using the CSS "z-index" attribute. 
+//Here, "stacking" refers to the visual arrangement and layering of components on top of one another on a website.
+
+Pagination - pagination is a very useful technique for indexing different pages of a website on the homepage. 
+              //If your website has lots of pages, you have to add some sort of pagination to each page.
+              syntax -ul.pagination
+
+CSS Validator
+Gradient Generator
+
+Hyphens property-CSS property is used to control the hyphenation of the text in the block-level elements. 
+ It defines how the word is hyphenated if it is too long or when the text wraps across multiple lines.

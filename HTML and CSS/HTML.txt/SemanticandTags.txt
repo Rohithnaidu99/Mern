@@ -1,0 +1,21 @@
+Semantic elements are elements in programming that clearly communicate their meaning to the developer and the browser.
+Non-semantic elements, on the other hand, don't have any meaning and don't tell anything about their content.  
+
+Semantic Elements:
+Eg-Header , Footer,section ,main 
+   Accessibility: Semantic elements can improve accessibility for users, especially those using screen readers or other assistive technologies.
+   SEO: Search engines can better understand the content and context of a webpage when semantic elements are used. 
+
+Non Semantic Elements:
+Eg- Span and Div
+  Styling: Non-semantic elements are often used as containers for styling and layout purposes.
+  Less Accessible: Since non-semantic elements do not provide any information about the structure or meaning of the content .
+
+  
+TAGS:
+HTML Tags: Tags are the starting and ending parts of an HTML element. 
+They begin with < symbol and end with > symbol. Whatever is written inside < and > are called tags.  Eg-<br>
+
+Elements:
+HTML elements: Elements enclose the contents in between the tags. They consist of some kind of structure or expression.
+// It generally consists of a start tag, content, and an end tag.

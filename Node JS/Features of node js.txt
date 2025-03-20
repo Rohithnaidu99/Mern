@@ -1,0 +1,12 @@
+What is JS?
+  //Node. js is a runtime environment that allows JavaScript to be executed on the server side. It is built on the V8 JavaScript engine from Chrome.
+
+Features of Node JS?
+>Event-Driven and Asynchronous − All the APIs (Application Interface Programming) of Node.js library uses asynchronous programming, 
+    //i.e non-blocking. It is an essential means that a Node.js based server never waits for an API to return data. 
+      //The server then moves to the next API after calling it. Moreover, a notification mechanism of Events of Node.js helps the server to get a response from the previous API call.
+>It’s Very Fast − Node.js library is very fast in code execution as it is built on Google Chrome's V8 JavaScript Engine.
+>Single-Threaded but Highly Scalable −There is the use of a single-threaded model with event looping in Nodejs programming. 
+  //The event mechanism supports the server in order to respond in a non-blocking way plus makes the server highly scalable in comparison to traditional servers
+    // which therefore create limited threads to handle requests. It uses a single-threaded program that can provide service to a much larger number of requests than the traditional servers like Apache HTTP Server.
+>No Buffering − Node.js applications, they, never buffer any sort of data. They simply output the data into chunks.
