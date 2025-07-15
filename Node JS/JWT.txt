@@ -1,0 +1,73 @@
+ 
+
+
+ Authentication Flow:
+ User logs in -> sends credentials to the backend.
+ 2. Backend validates credentials -> generates a JWT using jwt.sign().
+ 3. JWT is sent back to frontend and stored (e.g., localStorage or HTTP-only cookie).
+ 4. In subsequent requests, frontend sends JWT in headers.
+ 5. Backend verifies token using secret key via jwt.verify().
+ 6. If valid -> allow access; else -> deny
+
+Refresh Token Flow (Real-world Setup):-
+ JWTs should expire quickly (e.g., 5-15 minutes). To avoid constant logins, we use refresh tokens.
+ 1. User logs in -> server generates:
+   - Access Token (short-lived)
+   - Refresh Token (long-lived)
+ 2. Refresh Token is stored securely (usually HTTP-only cookie).
+ 3. When Access Token expires:
+   - Frontend detects expiration.
+   - Automatically calls /refresh endpoint with the Refresh Token.
+   - Server verifies it and issues a new Access Token.
+
+how to test JWT api in postman 
+  Make a POST request to your login endpoint
+  In Body → raw → JSON, enter your login payload
+  
+
+
+JWT Code :-
+ const express = require('express');
+ const jwt = require('jsonwebtoken');
+ const bcrypt = require('bcrypt');
+ const bodyParser = require('body-parser');
+ const { randomBytes } = require('crypto');
+ const app = express();
+ app.use(bodyParser.json());
+ const SECRET_KEY = 'your_secret_key';
+ const users = [];
+ app.post('/signup', async (req, res) => {
+  const { username, password } = req.body;
+  const existingUser = users.find(user => user.username === username);
+  if (existingUser) return res.status(400).json({ message: 'User already exists' });
+  const passwordHash = await bcrypt.hash(password, 10);
+  const newUser = { id: randomBytes(10).toString('hex'), username, password: passwordHash };
+  users.push(newUser);
+  const token = jwt.sign({ id: newUser.id, username: newUser.username }, SECRET_KEY, { expiresIn: '1h' });
+  res.json({ token });
+ });
+ app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+  const user = users.find(u => u.username === username);
+  if (!user || !(await bcrypt.compare(password, user.password))) {
+    return res.status(401).json({ message: 'Invalid credentials' });
+  }
+  const token = jwt.sign({ id: user.id, username: user.username }, SECRET_KEY, { expiresIn: '1h' });
+  res.json({ token });
+ });
+ function authenticateToken(req, res, next) {
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
+  if (!token) return res.sendStatus(401);
+  jwt.verify(token, SECRET_KEY, (err, user) => {
+    if (err) return res.sendStatus(403);
+    req.user = user;
+    next();
+  });
+ }
+ app.get('/notes', authenticateToken, (req, res) => {
+  res.json({ message: `Here are notes for user ${req.user.username}` });
+ });
+ app.listen(3000, () => {
+  console.log('Server running on port 3000');
+ });

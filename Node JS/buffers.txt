@@ -1,14 +1,12 @@
-//Node.js provides Buffer class to store raw data similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap. 
-  //Buffer class is used because pure JavaScript is not nice to binary data. So, when dealing with TCP streams or the file system, it's necessary to handle octet streams.
-
 What is buffer?
-A buffer is a temporary storage space for binary data. In Node.js, a buffer is a special type of object that allows you to work with raw binary data directly in memory. 
+A buffer is a temporary storage space(ram) for binary data. In Node.js, a buffer is a special type of object that allows you to work with raw binary data directly in memory. 
   //Buffers are particularly useful when dealing with I/O operations such as reading from or writing to a file or communicating over a network.
-
+  // Since JavaScript strings are UTF-16 encoded, they are not suitable for working with binary data, such as file content or network streams.
 
 Key Characteristics of Buffers
 Fixed-Size: Buffers have a fixed size, meaning their length cannot be altered once they are created.
 Binary Data: They are designed to handle raw binary data, unlike regular JavaScript strings that handle text data.
+Globally Available — No need to require() the Buffer class.
 Efficient Memory Usage: Buffers provide a way to manage memory efficiently, allowing for the manipulation 
                          //of binary data without the overhead of converting to and from text.
 

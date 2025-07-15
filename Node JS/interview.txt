@@ -1,0 +1,24 @@
+>.What kind of data can FS, Streams, Buffers handle? 
+  All 3 can handle any file type: 
+     //.txt, .json, .csv — text 
+    //.pdf, .jpg, .mp4, .mp3 — binary 
+    // .zip, .exe, .iso — anything 
+      They do not care about format — just deal with bytes.
+
+>>Can we use Stream without Buffer? 
+
+>>When should we prefer Streams over FS or Buffers? 
+Use Case                           Use 
+✅ Small files                  fs.readFile() 
+✅ Large files (logs/videos)     Streams 
+✅ Realtime piping               Streams 
+✅ Memory efficiency             Streams + Buffers
+✅ Need control over bytes       Buffers
+
+>>How does Buffer work with Streams? 
+In Streams: 
+1. Data arrives chunk-by-chunk 
+2. Each chunk is stored in a Buffer object 
+3. You read/write/modify that Buffer 
+4. Then it’s cleared for the next chunk 
+

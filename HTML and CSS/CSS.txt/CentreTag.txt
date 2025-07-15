@@ -21,26 +21,25 @@
  align-items: center; /* Center vertically */  
  height: 100vh; /* This ensures the container takes up the full viewport height */  
 }  
-  
-/* Styles for the centered div */  
-.centered-div {  
- padding: 20px;  
- border: 2px solid #333;  
- background-color: #f2f2f2;  
- text-align: center;  
-}  
+
   
  </style>  
 </head>  
 <body>  
- <div class="container">  
-  <div class="centered-div">  
-   <h3>Welcome to javaTpoint</h3>  
-   <p>This is the example of center div tag in both horizontally and vertically</p>  
-  </div>  
+ <div class="container">    
+   <h3>Hello world</h3> 
  </div>  
    
 </body>  
 </html>  
+
+How to form a circle with html?
+HTML - <div class="circle"></div>
+CSS- .circle {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;  /* This makes it a circle */
+}
 
 

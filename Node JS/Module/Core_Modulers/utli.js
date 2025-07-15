@@ -8,8 +8,8 @@ util.promisify() and more
 
 const util = require('util');
 
-const name = 'Mansoor';
-const age = 22;
+const name = 'Rohith';
+const age = 25;
 
 const message = util.format('My Name Is %s &  My Age Is %d',name , age);
 console.log(message);

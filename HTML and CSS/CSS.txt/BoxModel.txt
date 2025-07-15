@@ -1,4 +1,4 @@
-BoxModel-The CSS box model is essentially a box that wraps around every HTML element. It consists of: content, padding, borders and margins.
+BoxModel-The CSS box model is essentially a box that wraps around every HTML element. It consists of: content, padding, borders and margins.(CPBM)
 
 Content - The content of the box, where text and images appear
 Padding - Clears an area around the content. The padding is transparent

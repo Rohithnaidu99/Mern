@@ -1,5 +1,5 @@
 what is DOCTYPE?
-A doctype or document-type declaration is an instruction that tells the web browser about the markup language in which the current page is written.
+doctype declaration is an instruction at the beginning of a document that tells the browser which version of HTML it's dealing with. This helps the browser interpret and render the content correctly.
 
 What is the difference between <em> and <i> tags?
 <i> tag: It is one of the elements of HTML which is used in formatting HTML texts. It is used to define a text in technical terms, alternative mood or voice, a thought, etc.
@@ -9,12 +9,52 @@ what is use of dangerouslysetinnerhtml?
 DangerouslySetInnerHTML is a React property that allows developers to programmatically set the content of HTML elements in a React application.
  // It's a replacement for the browser DOM's innerHTML, and is useful for rendering dynamic HTML markups that can be retrieved from an external API.
 
- What are tags and attributes in HTML?
+ What are Elements, Tags and attributes in HTML?
+ Tags - HTML Tags are the starting and ending parts of an HTML element.
+       // They begin with < symbol and end with > symbol. Whatever is written inside < and > are called tags.
+          EG - <b> </b>
+Elements - The HTML element consists of both the opening and closing tags as well as what’s inside those tags.
+           // It normally consists of some structure that’s used to define the respective tags.
+            EG - <b>This is the content.</b> Is total is called Element.
+Attributes- It is used to define the character of an HTML element. It always placed in the opening tag of an element. 
+             //It generally provides additional styling (attribute) to the element.
+             EG -<p align="center">This is paragraph.</p>
+
 //Tags are the primary component of the HTML that defines how the content will be structured/ formatted, 
    //whereas Attributes are used along with the HTML tags to define the characteristics of the element. 
 
 What is the difference between progress and meter tag?
 The progress tag is used to represent the progress of the task only while the meter tag is used to measure data within a given range.
+
+  what is mega tag?
+Meta tags are HTML elements placed in the <head> of a webpage that give information about the page to:
+Browsers
+Search engines
+Social media platforms
+They don’t show on the page, but they affect how it's seen and shared.
+
+Importance of <label>?
+//The <label> element is used to provide a text description for an <input> form field. 
+  It improves usability and accessibility, especially for screen readers and people using assistive devices.
+
+what is Iframes?
+An <iframe> (short for inline frame) is an HTML element that allows you to embed another webpage inside your current webpage.
+
+what are workers ?
+Workers (especially Web Workers) are a feature in HTML5 that allow you to run JavaScript code in the background, separate from the main page (UI thread).
+  --> Limitations of Web Workers
+ Can't access the DOM directly
+ Limited access to window, document, alert, etc.
+ Can use fetch, timers, and basic JS APIs
+ -->Types of Web Workers:
+   1.Dedicated Worker	One page creates one worker (most common)
+   2.Shared Worker	Can be used by multiple tabs/windows (advanced)
+   3.Service Worker	Used for offline apps, caching, push notifications
+
+
+
+
+
 
 
 

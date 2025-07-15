@@ -1,0 +1,53 @@
+//Write a program to remove duplicates from an array ? c
+// Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers. C
+//How to check whether a string is palindrome or not ? C
+//Find the factorial of given number ? C
+//Program to find longest word in a given sentence ? X
+// Write a JavaScript program to find the maximum number in an array. C
+//Write a JavaScript function to check if a given number is prime. X
+// Program to find Reverse of a string without using built-in method ? C
+// Find the smallest word in a given sentence ? 
+//Write a function sumOfThirds(arr), which takes an array arr as an argument. This function should return a sum of every third number in the array, starting from the first one.
+// Write a JavaScript function that returns the Fibonacci sequence up to a given number of terms. X
+//Find the max count of consecutive 1ʼs in an array C
+// Given 2 arrays that are sorted [0,3,4,31] and [4,6,30]. Merge them and sort [0,3,4,4,6,30,31] X
+//Create a function which will accepts two arrays arr1 and arr2. The function should return true if every value in arr1 has 
+   its corresponding value squared in array2. The frequency of values must be same. Z
+//Given two strings. Find if one string can be formed by rearranging the letters of other string. Z
+// Write logic to get unique objects from below array ? C
+//Write a JavaScript program to find the largest element in a nested array. C
+// Given a string, write a javascript function to count the occurrences of each character in the string. C
+// Write a javascript  function that sorts an array of numbers in ascending order. C 
+// Write a javascript  function that sorts an array of numbers in descending order
+//. Write a javascript function that reverses the order of words in a sentence without using the built-in reverse() method? C
+// Implement a javascript function that flattens a nested array into a single-dimensional array? C
+//Write a function which converts string input into an object? X
+// Given an array, return an array where the each value is the product of the next two items: E.g. [3, 4, 5] -> [20, 15, 12] X
+//Find the 2nd largest element from a given array ? [100,20,112,22]  C
+//Find the pairs from given input ?
+ input1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+ input2 = 10;
+ output = [[4, 6], [3, 7], [2, 8], [1, 9]]
+ //Write a javascript program to get below output from given 
+input ?
+ I/P=abbcccddddeea
+ O/P= 1a2b3c4d2e1a
+----------------------------------------------------------------------------------------------------------------------------------------
+
+//Write a program to remove duplicates from an array ? 
+// Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers?
+//How to check whether a string is palindrome or not ? 
+//Find the factorial of given number ? 
+// Write a JavaScript program to find the maximum number in an array. 
+// Program to find Reverse of a string without using built-in method ? 
+// Implement a javascript function that flattens a nested array into a single-dimensional array? 
+//Write a JavaScript program to find the largest element in a nested array.
+// Write a javascript  function that sorts an array of numbers in ascending order. 
+//. Write a javascript function that reverses the order of words in a sentence without using the built-in reverse() method? 
+//Find the 2nd largest element from a given array ? [100,20,112,22]
+// Given a string, write a javascript function to count the occurrences of each character in the string. 
+
+// Write logic to get unique objects from below array ?
+//Find the max count of consecutive 1ʼs in an array ?
+
+

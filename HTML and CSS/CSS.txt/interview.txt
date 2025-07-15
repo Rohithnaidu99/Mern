@@ -23,3 +23,28 @@ The float CSS property places an element on the left or right side of its contai
 What is tweening?
 It is the process of generating intermediate frames between two images.
 
+
+
+Box-sizing property in css ?
+//The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+box-sizing: content-box (default):
+When you use content-box, the width and height you set are only for the content area. 
+  //Any padding or borders you add will increase the overall width and height of the element, but not within the specified dimensions. 
+box-sizing: border-box:
+With border-box, the width and height you set include the padding and borders. 
+ //This means that the specified dimensions are the total width and height, and any content will be contained within that space
+
+CSS @property Rule ?
+The @property rule is used to define custom CSS properties directly in the stylesheet without having to run any JavaScript.
+The @property rule has data type checking and constraining, sets default values, and defines whether the property can inherit values or not.
+The benefits of using @property:
+
+Type checking: You must specify the data type of the custom property, such as <number>, <color>, <length>, etc. This prevents errors and ensures that custom properties are used correctly
+Set default value: You set a default value for the custom property. This ensures that if an invalid value is assigned later, the browser uses the defined fallback value
+Set inheritance behavior: You must specify whether the custom property will, by default, inherit values from its parent elements or not.
+
+
+
+
+
+

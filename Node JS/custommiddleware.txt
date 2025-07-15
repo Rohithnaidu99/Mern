@@ -1,0 +1,27 @@
+Custom middleware is used for a wide range of tasks that need to be performed on requests before they reach the
+   final route handler or on responses before they are sent back to the client.
+
+Eg- Authentication and Authorization , Logging , Error Handling , Data Validation and Transformation
+
+// Load express
+const express = require('express');
+const app = express();
+
+// ✅ Custom middleware function
+function myLogger(req, res, next) {
+  console.log(`${req.method} ${req.url}`);
+  next(); // Pass control to the next handler
+}
+
+// ✅ Register the middleware globally
+app.use(myLogger);
+
+// ✅ Example routes
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+// ✅ Start server
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});

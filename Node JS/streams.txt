@@ -1,0 +1,26 @@
+// streams : In Node.js, streams are a fundamental way to handle flowing data, especially when dealing with large datasets or real-time data processing.
+                 They allow you to work with data in chunks, rather than loading the entire dataset into memory at once.
+                    //Streams in Node.js are instances of EventEmitter and allow us to read data from a source or write data to a destination in a continuous fashion. 
+There are four types of streams in Node.js:
+
+Readable: This stream is used for read operations.
+Writable: This stream is used for write operations.
+Duplex: This stream can be used for both read and write operations. From a TCP socket connection.
+Transform: It is type of duplex stream where the output is computed according to input. For example, compressing or encrypting data.
+
+Why Use Streams?
+  //Memory Efficiency: Streams handle data in small chunks, reducing the amount of memory required compared to loading entire data sets.
+  //Time Efficiency: Streams can process data as soon as it arrives, rather than waiting for all data to be available.
+  //Modularity: Streams can be composed together, allowing for more modular and maintainable code.
+
+--Pipe and Stream Composition:
+  One of the most powerful features of Node.js streams is the .pipe() method, which allows you to connect the output of one stream to the input of another.
+  //Piping is a mechanism where output of one stream is used as input to another stream. There is no limit on piping operation.
+
+Events in a Stream:
+Each type of stream is an Event emitter instance and throws several events at different times. Following are some commonly used events:
+Data:This event is fired when there is data available to read.
+End:This event is fired when there is no more data available to read.
+Error: This event is fired when there is any error receiving or writing data.
+Finish:This event is fired when all data has been flushed to underlying system.
+

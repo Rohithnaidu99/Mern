@@ -12,3 +12,30 @@ Grid layout:The CSS Grid Layout Module offers a grid-based layout system, with r
 Both are used for responsive webpages.
 Note: flex-box was designed for layout in one dimension - either a row or a column. Flex-box content is first. suit for navbar, footer.
 // Grid was designed for two-dimensional layout - rows, and columns at the same time.Grid is for Layout first.suits for page Layout.
+
+
+Flex-box Layout:
+| Property          | Description                               |
+| ----------------- | ----------------------------------------- |
+| `justify-content` | Aligns items **horizontally** (main axis) |
+| `align-items`     | Aligns items **vertically** (cross axis)  |
+| `flex-wrap`       | Allows items to wrap to the next line     |
+| `gap`             | Adds spacing between items                |
+
+
+Flexbox:
+Purpose: Creates one-dimensional layouts, either a row or a column. 
+Use Cases: Great for creating responsive navigation bars, aligning items within a single container, and creating flexible layouts for smaller components. 
+Key Properties: flex-direction, justify-content, align-items, flex-wrap. 
+Benefits: Easy to use, provides flexibility for aligning items, and is well-suited for smaller layouts and elements. 
+Example: A horizontal navigation bar where items are aligned and spaced evenly. 
+
+CSS Grid:
+Purpose: Creates two-dimensional layouts, with rows and columns. 
+Use Cases: Ideal for creating complex page layouts, designing grids for website sections, and structuring content into a defined grid. 
+Key Properties: grid-template-columns, grid-template-rows, grid-gap, place-items. 
+Benefits: Provides more control over layout structure, allows for complex arrangements, and is well-suited for larger layouts and website structures. 
+Example: A website layout with a header, main content area, sidebar, and footer, all organized into a grid. 
+Getting started: CSS Grid vs Flexbox | by Dania Herrera | Medium
+In summary: Flexbox is for one-dimensional layouts (rows or columns), while Grid is for two-dimensional layouts (rows and columns).
+         You can choose Flexbox for smaller components or dynamic layouts, while Grid is better for larger, more complex layouts. 

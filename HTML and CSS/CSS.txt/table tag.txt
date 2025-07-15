@@ -1,0 +1,14 @@
+In HTML and CSS, tables are used to display tabular data, and CSS allows you to style them for layout and design. 
+
+| Tag          | Description                          |
+| ------------ | ------------------------------------ |
+| `<table>`    | Defines a table                      |
+| `<tr>`       | Table row                            |
+| `<td>`       | Table data (cell)                    |
+| `<th>`       | Table header cell                    |
+| `<thead>`    | Groups the header content in a table |
+| `<tbody>`    | Groups the body content in a table   |
+| `<tfoot>`    | Groups the footer content in a table |
+| `<caption>`  | Adds a title or caption to a table   |
+| `<col>`      | Specifies column properties          |
+| `<colgroup>` | Groups one or more `<col>` elements  |

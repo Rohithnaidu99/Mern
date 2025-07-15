@@ -1,0 +1,58 @@
+Why Node JS is single thread?
+ //In traditional back-end systems (like Java or .NET), each incoming request is handled by a separate thread from a thread pool. 
+ //These threads are system resources, and the total number of threads is limited. 
+ //If millions of requests come in and the thread pool is full, any new request must wait for an existing thread to finish before it can be processed. 
+//This causes bottlenecks, increased response times, and poor scalability.
+For example, in a system like Uber: 
+-- A user requests a ride through the app. 
+--That request is sent to Uber's server. 
+--The server processes it, finds an available driver, and responds with the ride details.Every time 1 tread is assigned to the node.if millions of requests come in and the thread pool is full
+      
+Node.js solves these problems with a single-threaded, event-driven architecture:
+ //It doesn’t create a new thread per request. 
+ //Instead, it uses a single thread and an event loop to handle multiple asynchronous tasks concurrently. 
+ //While one task (e.g., reading a file or querying a database) is in progress, Node.js moves on to handle the next request — without waiting. 
+
+
+Node.js is an open-source, cross-platform JavaScript runtime environment that allows you to run JavaScript code on the server side, 
+  outside of the web browser. It is built on the V8 JavaScript engine from Google Chrome, which compiles JavaScript directly into native machine code for high performance. 
+
+One of the key features of Node.js is its non-blocking, event-driven architecture. This means that Node.js can handle multiple operations 
+concurrently without waiting for one operation to finish before starting another. This is achieved through an asynchronous I/O model, which makes 
+it well-suited for building applications that need to handle a large number of simultaneous connections, such as real-time applications or APIs.
+
+---What is the difference between Node.js and JavaScript? 
+JavaScript is a programming language primarily used for client side development to create interactive web pages in the browser. It runs in 
+the browser and interacts with the Document Object Model (DOM) to manipulate HTML and CSS. 
+
+Node.js, on the other hand, is a runtime environment that allows JavaScript to run server-side. It enables JavaScript to handle server tasks like building 
+web servers, interacting with databases, and processing files. Node.js is event-driven, non-blocking, and uses npm (Node Package Manager) for 
+ managing server-side libraries. 
+
+--What are the advantages of using Node.js?
+Non-blocking, Asynchronous I/O , Fast Performance , Single Programming Language , Scalability ,Large Ecosystem (npm) ,Cross-platform
+
+---How does Node.js handle concurrency despite being single-threaded? 
+Node.js handles concurrency through its event-driven, non blocking I/O model. Even though it operates on a single-threaded event loop, it can manage multiple concurrent requests efficiently by delegating I/O operations.
+Event Loop: Handles multiple requests in a non-blocking manner by processing callbacks in the event queue. 
+Non-blocking I/O: I/O tasks (e.g., reading files, network requests) are handled asynchronously, allowing the single thread to process other tasks in the meantime. 
+Worker Threads: For CPU-intensive tasks, Node.js can use worker threads or external tools to offload heavy computation, but the event loop remains the core for concurrency. 
+                Eg - Machine learning , JSON paring.
+
+---What is event-driven programming in Node.js? 
+Event-driven programming in Node.js is a programming paradigm where the flow of the program is determined by events. In this model, the application responds to events or signals (such as user actions, 
+data arriving, or system messages) rather than following a linear execution sequence. 
+Key Concepts of Event-driven Programming in Node.js: 
+1. Event Loop: Node.js operates on a single thread using an event loop 
+to handle multiple tasks concurrently. The event loop listens for events 
+and triggers the corresponding callbacks when the events occur. This 
+allows Node.js to be highly scalable, even though it is single-threaded. 
+2. Event Emitters: In Node.js, EventEmitter is a core module that 
+allows objects to emit events and listen for them. For example, the 
+http module in Node.js emits events like request and response that you 
+can listen to and handle in your application. 
+3. Callbacks: In event-driven programming, events are handled using 
+callback functions. These are functions passed as arguments that get 
+executed when a specific event occurs.
+
+

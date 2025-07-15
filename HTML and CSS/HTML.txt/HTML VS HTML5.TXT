@@ -1,0 +1,30 @@
+| Feature                | HTML (HTML4/earlier)    | HTML5                                            |
+| ---------------------- | ----------------------- | ------------------------------------------------ |
+| ❓ Doctype Declaration  | Long and complex        | Simple: `<!DOCTYPE html>`                        |
+| 🏷️ Semantic Tags      | ❌ No                    | ✅ Yes: `<header>`, `<footer>`, `<article>`, etc. |
+| 🎥 Multimedia Support  | Limited, needed plugins | Built-in: `<audio>`, `<video>`                   |
+| 📱 Mobile Optimization | ❌ No                    | ✅ Yes, mobile-first design                       |
+| 🧠 APIs and Features   | ❌ None                  | ✅ Yes: Geolocation, Web Storage, Canvas, etc.    |
+| 🧩 Form Enhancements   | Basic forms             | New input types: `email`, `date`, `range`, etc.  |
+| 🖼️ Graphics           | Needed Flash/SVG        | `<canvas>` and `<svg>` supported                 |
+| 🧪 Browser Support     | Older browsers          | Modern browsers (Chrome, Edge, Firefox, Safari)  |
+
+| Tag         | Purpose                       |
+| ----------- | ----------------------------- |
+| `<header>`  | Top of a section or page      |
+| `<footer>`  | Bottom section or page        |
+| `<article>` | Independent piece of content  |
+| `<section>` | Thematic grouping of content  |
+| `<nav>`     | Navigation links              |
+| `<aside>`   | Sidebar or tangential content |
+| `<main>`    | Main content area             |
+
+DOCTYPE - which tells the system which file we are using (HTMl)
+HTML - is a root 
+table tags and Properties
+arch ,Navigation , image tag 
+forms - input radio , drop dowm 
+
+
+
+

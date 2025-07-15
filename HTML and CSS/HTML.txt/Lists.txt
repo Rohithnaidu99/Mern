@@ -1,5 +1,5 @@
 HTML lists allow web developers to group a set of related items in lists.
-1. Unordered  List          2 .Ordered List
+1. Unordered  List disk ,         2 .Ordered List types
 
 Unordered HTML List:An unordered list starts with the <ul> tag. Each list item starts with the <li> tag.
 <ul>

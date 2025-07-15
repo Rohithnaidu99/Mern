@@ -3,8 +3,8 @@ What are Modules?
  They allow you to break down your application into smaller, manageable parts, making your code more organized, maintainable, and reusable.
 
 core modules :
-They are actually avilable in default installation of node js , you dont have to programm anything , 
-you dont have to install anything just else node js to get the core modules working 
+They are actually avilable in default installation of node js , you dont have to program anything , 
+you do not have to install anything just else node js to get the core modules working 
 
 few of core modules are ; 
 

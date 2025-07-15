@@ -1,0 +1,97 @@
+What is REST API?
+//REST (REpresentational State Transfer) is an architectural style for designing networked applications.
+A REST API is an API that follows REST principles, allowing communication between client and server over HTTP using stateless operations.
+
+| Method   | Action  | Use For                             |
+| -------- | ------- | ----------------------------------- |
+| `GET`    | Read    | Fetching data (e.g., get user list) |
+| `POST`   | Create  | Adding a new record                 |
+| `PUT`    | Replace | Replacing the whole record          |
+| `PATCH`  | Update  | Updating part of the record         |
+| `DELETE` | Delete  | Deleting a resource                 |
+
+
+Errors codes in HTTPS 
+ 1xx – Informational Responses
+ 2xx - Success Codes
+   | Code             | Meaning                            | When to Use                                      |
+   | ---------------- | ---------------------------------- | ------------------------------------------------ |
+  | `200 OK`         | Request successful                 | `GET`, `PUT`, `PATCH`, or general success        |
+  | `201 Created`    | Resource created                   | After a successful `POST`                        |
+  | `202 Accepted`   | Request accepted but not completed | For long-running or async tasks                  |
+  | `204 No Content` | Successful, no body returned       | `DELETE` or successful `PUT` with no return data |
+3xx – Redirection
+4xx – Client Errors
+| Code                       | Meaning                          | When to Use                                                           |
+| -------------------------- | -------------------------------- | --------------------------------------------------------------------- |
+| `400 Bad Request`          | Invalid request body/query       | Missing required fields, invalid JSON                                 |
+| `401 Unauthorized`         | Not authenticated                | Missing or invalid token/login                                        |
+| `403 Forbidden`            | Authenticated, but not allowed   | Logged-in user lacks permission                                       |
+| `404 Not Found`            | Resource not found               | e.g., `GET /users/999` for non-existent ID                            |
+| `405 Method Not Allowed`   | Method not supported on resource | Using `POST` on a `GET`-only endpoint                                 |
+| `409 Conflict`             | Conflict with existing state     | e.g., duplicate email during signup                                   |
+| `422 Unprocessable Entity` | Validation failed                | Payload correct format, but semantic error (e.g., "email is invalid") |
+| `429 Too Many Requests`    | Rate limiting                    | Throttle abuse or spam (API rate limiter)                             |
+5xx – Server Errors
+| Code                        | Meaning                        | When to Use                                      |
+| --------------------------- | ------------------------------ | ------------------------------------------------ |
+| `500 Internal Server Error` | Unexpected server crash        | Catch-all for unhandled exceptions               |
+| `501 Not Implemented`       | Endpoint not yet available     | Stub routes under development                    |
+| `502 Bad Gateway`           | Server acting as gateway/proxy | Used in load balancer/proxy failures             |
+| `503 Service Unavailable`   | Server down or overloaded      | Used during maintenance or scaling               |
+| `504 Gateway Timeout`       | Upstream server timeout        | When a dependent service doesn’t respond in time |
+
+
+
+
+
+--Structure of REST API
+const express = require('express');
+const app = express();
+app.use(express.json());
+
+// GET all users
+app.get('/users', (req, res) => {
+  res.json([{ id: 1, name: 'Alice' }]);
+});
+
+// POST create user
+app.post('/users', (req, res) => {
+  const newUser = req.body;
+  res.status(201).json(newUser); // Simulating creation
+});
+
+// PUT replace user
+app.put('/users/:id', (req, res) => {
+  const updatedUser = req.body;
+  res.json(updatedUser);
+});
+
+// PATCH update field
+app.patch('/users/:id', (req, res) => {
+  res.json({ message: "User partially updated" });
+});
+
+// DELETE user
+app.delete('/users/:id', (req, res) => {
+  res.status(204).send();
+});
+
+app.listen(3000, () => console.log('REST API running on port 3000'));
+
+
+| Feature            | REST API                                          | GraphQL                                     |
+| ------------------ | ------------------------------------------------- | ------------------------------------------- |
+| **Structure**      | Multiple endpoints (`/users`, `/posts`)           | One endpoint (`/graphql`)                   |
+| **Data Fetching**  | Fixed responses (can over-fetch or under-fetch)   | Client controls what fields to fetch        |
+| **Versioning**     | Often uses versioning (e.g., `/v1/users`)         | No need for versioning (schema evolves)     |
+| **HTTP Verbs**     | Uses `GET`, `POST`, `PUT`, `DELETE`               | Uses only `POST` (typically)                |
+| **Data Shape**     | Fixed by server                                   | Defined by client                           |
+| **Over-fetching**  | Yes, returns full object even if you need 1 field | No, client fetches exactly what it wants    |
+| **Under-fetching** | Requires multiple requests                        | Single query for all related data           |
+| **Error Handling** | HTTP status codes                                 | Errors are returned in the response body    |
+| **Caching**        | Easy with HTTP caching                            | Requires custom caching strategies          |
+| **File Uploads**   | Standard with multipart/form-data                 | More complex (uses base64 or separate APIs) |
+
+
+

@@ -1,0 +1,34 @@
+when we user cluster and worker thread?
+In Node.js, a Cluster is a core module (cluster) that allows you to create child processes (workers) that all share the same server port.
+  // It’s a way to take full advantage of multi-core systems.
+Node.js runs in a single-threaded environment by default. So, even on an 8-core machine, your Node.js server uses only one core — the other 7 are idle. 
+  //That’s inefficient for handling CPU-heavy tasks or many concurrent requests.
+
+How it Works :
+Uses cluster module to fork child processes.
+Each forked process is a full Node.js process (with its own event loop and memory).
+All child processes can share the same server port.
+The master process acts as a load balancer, distributing connections to workers.
+
+Behind the Scenes :
+The master process manages and communicates with worker processes.
+Node uses the child_process.fork() method under the hood.
+A round-robin algorithm is used on Unix (since Node v16+), or OS-level scheduling is used on Windows.
+
+What each process has:
+Its own JavaScript engine (V8)
+Its own memory space
+Its own event loop
+Its own thread pool (libuv)
+
+| Feature           | `cluster`                   | `worker_threads`                      | `child_process.spawn`    | `child_process.fork`     |
+| ----------------- | --------------------------- | ------------------------------------- | ------------------------ | ------------------------ |
+| Architecture Type | Multi-process               | Multi-thread                          | Multi-process            | Multi-process            |
+| Memory Shared?    | ❌ No                        | ✅ Yes (via SharedArrayBuffer)         | ❌ No                     | ❌ No                     |
+| Use case          | Scale across CPU cores      | Heavy CPU computation inside same app | Run external scripts     | Run same JS module       |
+| Communication     | IPC via `process.send`      | `postMessage` + shared memory         | stdout/stderr + stdin    | IPC via `process.send`   |
+| Event Loop        | Each process has its own    | Shared across all threads             | Each process has its own | Each process has its own |
+| V8 Engine         | Separate per worker         | Shared                                | Separate                 | Separate                 |
+| Created By        | `cluster.fork()`            | `new Worker()`                        | `child_process.spawn()`  | `child_process.fork()`   |
+| Parallelism       | True across cores           | True across threads                   | True                     | True                     |
+| Best For          | HTTP request load balancing | Math-heavy, CPU-bound code            | Run bash/python commands | Child Node.js code       |

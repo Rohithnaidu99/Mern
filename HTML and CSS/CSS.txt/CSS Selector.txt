@@ -1,8 +1,45 @@
 CSS selectors are used to select the content you want to style. 
 //Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.
 
-CSS Element Selector-The element selector selects the HTML element by name. Eg - <p> 
-CSS Id Selector -The id sector selects the id attribute of an HTML element to select a specific element. An id is always unique within the page Eg-(#)
-CSS Class Selector -The class selector selects HTML elements with a specific class attribute. It is used with a period character (.) 
-CSS Universal Selector - The universal selector is used as a wildcard character. It selects all the elements on the pages.(*)
-CSS Group Selector - The grouping selector is used to select all the elements with the same style definitions. Eg-h1,h2,p {  }  
+Simple selectors (select elements based on name, id, class)
+Combinator selectors (select elements based on a specific relationship between them)
+Pseudo-class selectors (select elements based on a certain state)
+Pseudo-elements selectors (select and style a part of an element)
+Attribute selectors (select elements based on an attribute or attribute value)  
+
+| Type                | Example                      | Description                       |
+| ------------------- | ---------------------------- | --------------------------------- |
+| Simple Selector     | `p`, `.class`, `#id`         | Basic tag, class, or ID targeting |
+| Combinator Selector | `div > p`, `ul li`           | Based on element relationships    |
+| Pseudo-class        | `a:hover`, `:first-child`    | Element state                     |
+| Pseudo-element      | `p::after`, `::first-letter` | Parts of elements                 |
+| Attribute Selector  | `[type="text"]`              | Matches based on attributes       |
+
+Simple Selectors :These selectors target elements by name, ID, or class.
+Combinator Selectors:These define relationships between elements.
+Pseudo-class Selectors :These target elements in a specific state or condition.
+Pseudo-element Selectors:These target specific parts of an element.
+| Selector         | Description                       |
+| ---------------- | --------------------------------- |
+| `::before`       | Inserts content before an element |
+| `::after`        | Inserts content after an element  |
+| `::first-letter` | Styles the first letter           |
+| `::first-line`   | Styles the first line of text     |
+Attribute Selectors:Select elements based on their attributes or attribute values.
+| Selector          | Description                                |
+| ----------------- | ------------------------------------------ |
+| `[type]`          | Selects elements with the `type` attribute |
+| `[type="text"]`   | Only where `type="text"`                   |
+| `[href^="https"]` | Starts with "https"                        |
+| `[src$=".jpg"]`   | Ends with ".jpg"                           |
+| `[title*="dog"]`  | Contains the word "dog"                    |
+
+
+| Type                | Example                      | Description                       |
+| ------------------- | ---------------------------- | --------------------------------- |
+| Simple Selector     | `p`, `.class`, `#id`         | Basic tag, class, or ID targeting |
+| Combinator Selector | `div > p`, `ul li`           | Based on element relationships    |
+| Pseudo-class        | `a:hover`, `:first-child`    | Element state                     |
+| Pseudo-element      | `p::after`, `::first-letter` | Parts of elements                 |
+| Attribute Selector  | `[type="text"]`              | Matches based on attributes       |
+

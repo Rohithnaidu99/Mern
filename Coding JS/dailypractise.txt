@@ -1,0 +1,267 @@
+1.Write a program to remove duplicates from an array 
+function removeDuplicates(arr) {
+  const uniqueArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (!uniqueArr.includes(arr[i])) {
+      uniqueArr.push(arr[i]);
+    }
+  }
+
+  return uniqueArr;
+}
+
+// Example usage
+const array = [1, 2, 2, 3, 4, 4, 5];
+const result = removeDuplicates(array);
+console.log(result); // [1, 2, 3, 4, 5]
+ ----------------------------
+ const a = [1, 2, 3, 4, 5, 2, 3, 6];
+let seen = new Set();
+let dupli = [];
+for (let i = 0; i < a.length; i++) {
+    if (seen.has(a[i])) {
+        dupli.push(a[i]);
+    } else {
+        seen.add(a[i]);
+    }
+}
+console.log(dupli);
+
+-------------------------------------------------
+function duplicate(arr){
+  let result = [];
+  
+  for (let i =0;i<arr.length;i++){
+    let isDuplicates = false ;
+    
+    for (let j =0;j<result.length;j++){
+      if (arr[i] == result[j]){
+        isDuplicates = true;
+        break;
+      }
+    }
+    if (!isDuplicates){
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+console.log(duplicate([1,2,2,3,4,4,5]));
+
+----------------------------------------------------------------------------------------------------------------------------------
+ 
+Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers?
+function findEvenNumbers(arr) {
+ const result = [];
+ for (let i = 0; i < arr.length; i++) {
+ if (arr[i] % 2 === 0) {
+            result.push(arr[i]*2); // return result *2
+ }
+ }
+ return result;
+ }
+ const numbers = [1, 2, 3, 4, 5, 6, 7, 8,-8,19, 9, 10];
+ console.log("Even numbers:", findEvenNumbers(numbers));
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+How to check whether a string is palindrome or not ?
+ function checkPallindrome = (str) => {
+ const len = str.length;
+ for (let i = 0; i < len/2; i++) {
+ if (str[i] !== str[len - i - 1]) {
+ return "Not pallindrome";
+ }
+ }
+ return "pallindrome";
+ };
+ console.log(checkPallindrome("madam"));
+
+----------------------------------------------------------------------------------------------------------------------------------
+Find the factorial of given number ?
+ function findFactorial = (num) => {
+ if (num == 0 || num == 1) {
+ return 1;
+ } else {
+ return num * findFactorial(num - 1);
+ }
+ };
+ console.log(findFactorial(4));
+
+----------------------------------------------------------------------------------------------------------------------------------
+Write a JavaScript program to find the maximum number in an array. 
+function findMax(arr) {
+  let max = arr[0]; 
+ for (let i = 1; i < arr.length; i++) {
+ if (arr[i] > max) {
+   max = arr[i]; // Update max if current element is
+  }
+ }
+ return max;
+ }
+ const numbers = [1, 6, -33, 9, 4, 8, 2];
+ console.log("Maximum number is:", findMax(numbers));
+
+----------------------------------------------------------------------------------------------------------------------------------
+// Program to find Reverse of a string without using built-in method ? 
+ function findReverse = (sampleString) => {
+ let reverse = "";
+ for (let i = sampleString.length - 1; i >= 0; i--) {
+    reverse += sampleString[i];
+ }
+  return(reverse);
+ };
+ console.log(findReverse("Hello I am Rohith Ui Developer"));
+
+----------------------------------------------------------------------------------------------------------------------------------
+Implement a javascript function that flattens a nested array into a single-dimensional array 
+function flattenArray(arr) {
+    let result = [];
+
+    function flatten(element) {
+        for (let i = 0; i < element.length; i++) {
+            if (Array.isArray(element[i])) {
+                flatten(element[i]);  // Recursively flatten
+            } else {
+                result.push(element[i]);  // Push to result
+            }
+        }
+    }
+
+    flatten(arr);
+    return result;
+}
+
+// Example usage
+console.log(flattenarray([1,[2,[3,4],5],6]));
+
+---------------------------------------------------------------------------------------------------------------------------------
+Write a JavaScript program to find the largest element in a nested array. 
+
+function findLargest(arr){
+  let max = -Infinity;
+  function traverse(arr){
+    for (let i =0;i<arr.length;i++){
+      if(Array.isArray(arr[i])){    // // If element is an array, recursively call
+        traverse(arr[i]);
+      } else{
+        if (arr[i]>max){
+          max = arr[i];
+        }
+      }
+    }
+  }
+  traverse(arr);
+  return max;
+}
+ let nestedArray = [2, [5, 8], [4, [10, 11]], 7];
+console.log(findLargest(nestedArray));
+
+------------------------------------------------------------------------------------------------------------------------------
+
+// Write a javascript  function that sorts an array of numbers in ascending order. 
+function sort(arr){
+  let n = arr.length;
+  for (let i =0;i < n-1;i++){
+    for (let j =0;j < n - i -1;j++){
+      if (arr[j] >arr[j +1]){    // for descending order just change (arr[j] < arr[j +1])
+        var temp = arr[j];
+        arr[j] = arr [j +1];
+        arr [j +1] = temp ;
+      }
+    }
+  }
+   return arr;
+}
+
+var number = [ 1,2,7,3,4,5];
+console.log(sort(number));
+
+-------------------------------------------------------------------------------------------------------------------------------------
+// Write a javascript function that reverses the order of words in a sentence without using the built-in reverse() method? 
+
+function reverseWords(sentence) {
+  const words = sentence.split(" "); // Split the sentence into an array of words
+  let reversedWords = []; // Create an empty array to store the reversed words
+
+  // Loop through the words array from the last word to the first
+  for (let i = words.length - 1; i >= 0; i--) {
+    reversedWords.push(words[i]); // Add each word to the reversedWords array
+  }
+
+  // Join the reversed words array back into a string with spaces
+  return reversedWords.join(" ");
+}
+
+// Example usage:
+const sentence = "Hello world, this is JavaScript!";
+const reversedSentence = reverseWords(sentence);
+console.log(reversedSentence);
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+// Given a string, write a javascript function to count the occurrences of each character in the string. 
+
+function countCharacters(str){
+  let count = {};
+  for ( let i =0;i<str.length;i++){
+    let char = str[i];
+    if (count[char]){
+      count[char]++;
+    }else{
+      count[char] =1;
+    }
+  }
+  return count;
+}
+console.log(countCharacters("hello")); // Output: { h: 1, e: 1, l: 2, o: 1 }
+
+--------------------------------------------------------------------------------------------------
+/Find the 2nd largest element from a given array ?
+
+ function findSecondLargest(arr) {
+    let first = -Infinity;
+    let second = -Infinity;
+
+    for (let i = 0; i < arr.length; i++) {
+        let num = arr[i];
+
+        if (num > first) {
+            second = first;
+            first = num;
+        } else if (num > second && num !== first) {
+            second = num;
+        }
+    }
+
+    if (second === -Infinity) {
+        return "Second largest element not found.";
+    } else {
+        return second;
+    }
+}
+
+// Example usage:
+let numbers = [100, 20, 112, 22];
+console.log("Second largest element is:", findSecondLargest(numbers));
+
+------------------------------------------------------------------------
+Find prime number or not in js?
+function isPrime(n) {
+  if (n <= 1) return false;
+
+  for (let i = 2; i * i <= n; i++) {
+    if (n % i === 0) return false;
+  }
+
+  return true;
+}
+
+// Example usage
+console.log(isPrime(2));  // true
+console.log(isPrime(17)); // true
+console.log(isPrime(18)); // false
+
+
+

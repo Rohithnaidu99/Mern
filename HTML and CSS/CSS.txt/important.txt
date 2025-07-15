@@ -8,11 +8,11 @@ Filter: none | invert() | drop-shadow() | brightness() | saturate() | blur() | h
 Overflow Property -
 visible -	It specifies that overflow is not clipped and renders the element outside its box. It is the default value of the CSS overflow property.
 hidden -	It specifies that the overflow is clipped, and rest of the content will be invisible.
-scroll	- It specifies that the overflow is clipped, and a scroll bar is used to see the rest of the content.
-Clip -	It specifies that if overflow is clipped, then the rest of the content will be clipped.
-auto- It specifies that if overflow is clipped, a scroll bar is needed to see the rest of the content.
-inherit	- It inherits the property from its parent element.
-initial - It is used to set the property to its initial value.
+scroll	-   It specifies that the overflow is clipped, and a scroll bar is used to see the rest of the content.
+Clip -	    It specifies that if overflow is clipped, then the rest of the content will be clipped.
+auto-       It specifies that if overflow is clipped, a scroll bar is needed to see the rest of the content.
+inherit	-   It inherits the property from its parent element. 
+initial -   It is used to set the property to its initial value.
 
 CSS Padding property  - is used to define the space between the element content and the element border.
 
@@ -27,10 +27,17 @@ CSS Z-Index - The stacking order of components on a web page is usually managed 
 
 Pagination - pagination is a very useful technique for indexing different pages of a website on the homepage. 
               //If your website has lots of pages, you have to add some sort of pagination to each page.
-              syntax -ul.pagination
+              syntax -ul.pagination .
 
 CSS Validator
 Gradient Generator
 
 Hyphens property-CSS property is used to control the hyphenation of the text in the block-level elements. 
  It defines how the word is hyphenated if it is too long or when the text wraps across multiple lines.
+
+
+
+CSS Custom Properties (Variables) --CSS Custom Properties, commonly called CSS Variables, 
+    allow you to store values (like colors, fonts, sizes) in reusable names that can be accessed throughout your stylesheet.
+
+

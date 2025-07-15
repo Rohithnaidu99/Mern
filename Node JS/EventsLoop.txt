@@ -17,12 +17,29 @@ How does it works ?
 
 >Phases of the Event Loop: The event loop is divided into different phases, each with a specific purpose. 
                    //Each phase has a callback queue associated with it, and the event loop processes the callbacks in these queues in order.
-                    // like -Timers Phase,Pending Callbacks,Idle, Prepare ,Poll Phase, Check Phase
+                    // like -Timers Phase(setTimeout() and setInterval()),
+                            Pending Callbacks(deferred I/O callbacks like TCP errors)
+                            Idle/Prepare(Internal use by libuv.)
+                            Poll Phase(File reads)
+                            Check Phase(setImmediate())
+                             Close Callbacks(Executes close events(socket.on('close')))
 
 >Microtask Queue: There’s also a micro task queue, which holds promises and other micro tasks like process.nextTick(). 
           //Micro tasks are processed immediately after the currently executing task completes, but before the event loop moves on to the next phase.
 
-
+Real time example - For asynchronous operations
+  --JS calls fs.readFile()
+  --Node offloads this to libuv(Libuv has are 4 threads by default).
+     // adjust the size of the libuv thread pool by setting the "UV_THREADPOOL_SIZE" environment variable. The maximum value is 1024.
+     //libuv uses its thread pool and Reads file
+     //Event Loop: Pushes the callback into the callback queue
+     //Executes callback when control reaches that phase
+  --- For synchronous operations:
+     //synchronous or CPU-intensive code (like loops, compression, encryption, image processing) blocks the event loop, preventing it from handling other requests.
+     //Worker Threads allow us to offload synchronous code to a separate JavaScript thread (not libuv's C++ thread pool), so the main thread stays free.
+     // Each Worker has its own V8 instance and event loop, so it does not block the main thread.
+     //There is no hard-coded limit in Node.js itself for how many Worker Threads you can create but 4-8 is ideal.
+ 
 
 Key Features of the Event Loop:
 >Single-threaded: Node.js uses a single thread for JavaScript execution, but the event loop enables it to handle multiple concurrent operations.

@@ -1,0 +1,46 @@
+| Feature                    | CSS (Pre-CSS3)                    | CSS3                                                |
+| -------------------------- | --------------------------------- | --------------------------------------------------- |
+| **Selectors**              | Basic (e.g., element, class, ID)  | Advanced selectors (e.g., `nth-child`, `:hover`)    |
+| **Layout**                 | Basic layouts (float-based)       | New layout systems (Flexbox, Grid)                  |
+| **Borders & Corners**      | Square borders                    | Rounded corners with `border-radius`                |
+| **Text Effects**           | Basic text styling                | Advanced text shadows, gradients, etc.              |
+| **Backgrounds**            | Solid colors, basic images        | Gradients, background-size, multi-backgrounds       |
+| **Transitions/Animations** | ❌ No support                      | ✅ Full support for animations and transitions       |
+| **Media Queries**          | ❌ Responsive design not available | ✅ Full support for responsive design (mobile-first) |
+| **Shadows**                | ❌ No support                      | ✅ Box shadows, text shadows                         |
+| **Web Fonts**              | ❌ Limited fonts                   | ✅ `@font-face`, custom web fonts                    |
+| **Transformations**        | ❌ No support                      | ✅ 2D/3D transforms (`rotate`, `scale`, etc.)        |
+
+
+Major Features Introduced in CSS3:
+1. CSS Transitions
+   --Allows smooth changes of property values over time (e.g., hover effects).
+2. CSS Animations
+   --Enables complex animations directly in CSS without JavaScript.
+3. Flexbox
+A layout model that makes it easier to design complex layouts with simple rules.
+4. CSS Grid
+A powerful 2D layout system for creating complex grid-based designs.
+5. Border Radius
+Enables rounded corners with the border-radius property.
+6. Web Fonts
+With @font-face, you can load custom fonts for better typography.
+
+CSS (Before CSS3):
+Layouts were based on floats and positioning (absolute, relative, etc.).
+Box model and clearfix were commonly used to solve layout issues.
+
+CSS3:
+Flexbox and CSS Grid make it much easier to create modern, responsive layouts without complex hacks.
+
+CSS Grid allows for complex 2D layouts, while Flexbox is great for linear layouts.
+
+| Feature                   | CSS (Pre-CSS3)               | CSS3                                        |
+| ------------------------- | ---------------------------- | ------------------------------------------- |
+| Layout                    | Float-based, positioning     | Flexbox, Grid, advanced layouts             |
+| Animation and Transitions | ❌ No                         | ✅ Full support for transitions & animations |
+| Advanced Styling          | Basic styles only            | Gradients, shadows, rounded corners         |
+| Responsive Design         | ❌ No                         | ✅ Responsive (via media queries)            |
+| Font Support              | ❌ Custom fonts not available | ✅ Web fonts (`@font-face`)                  |
+
+

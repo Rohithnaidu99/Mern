@@ -30,3 +30,29 @@ Explain the purpose and use of npm (Node Package Manager).
 • Explain the difference between synchronous and asynchronous file operations.
 • What are streams in Node.js, and how do they work?
 • How do you handle large files using streams in Node.js?
+
+
+LABUV 
+1.Event Loop
+2.Asynchronous Programming
+3.Modules in Node.js
+4.Global Objects & Process
+5.Streams & Buffers
+6.HTTP Module
+7.Express.js -- Middleware , Routing ,Error handling , REST API creation
+8.Middleware Concepts
+9.File System (fs module)
+10.Handling JSON & APIs
+11.EventEmitter,Child Processes,Cluster Module,WebSockets,Error Handling,
+12.Authentication (How ti impelte )
+13.How to design scalable APIs
+   Load balancing in Node.js
+   Rate limiting, caching (Redis), and throttling
+
+   what is event loop and how does it works and Key Phases of the Event Loop ?
+    // what is LABUV and 
+    //Explain crypto module in Node.js. 
+   What is event-driven programming in Node.js?
+   What is buffer in Node.js? 
+   What are streams in Node.js? 
+   .What is Cluster?

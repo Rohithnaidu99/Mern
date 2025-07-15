@@ -1,0 +1,39 @@
+Error Boundary Vs try & catch block :
+
+Error Boundary-error boundary is a React component that catches JavaScript errors anywhere in its child component tree, logs those errors, and displays a fallback UI instead of crashing the entire React application.
+// Error boundaries are designed to gracefully handle errors that occur during rendering, in lifecycle methods, and in constructors of the components they wrap.
+componentDidCatch method used for life cycle method.
+
+//<ErrorBoundary>
+  <MyComponent />
+</ErrorBoundary>
+
+
+Note -It's important to note that error boundaries only catch errors that occur during rendering.
+// They do not catch errors that occur in event handlers (e.g., onClick) or in asynchronous code (e.g., setTimeout or a fetch request) within the component tree.
+
+Try and Catch Blocks --
+
+the try and catch blocks are used for error handling. 
+ //They allow you to attempt to execute code that might throw an error, and if an error occurs, you can catch and handle it gracefully without crashing the entire program.
+ TRY-The try block contains the code that you want to attempt to execute. 
+ //If an error occurs within this block, it is thrown and execution immediately jumps to the corresponding catch block.
+Catch-The catch block follows the try block and contains the code that handles the error thrown within the try block. 
+ //If an error occurs, the control flow jumps to the catch block, and the error object is passed to the catch block as a parameter.
+
+try {
+  // Code that might throw an error
+  throw new Error('Something went wrong');
+} catch (error) {
+  // Code to handle the error
+  console.error('An error occurred:', error.message);
+}
+
+Compare -Error boundaries are specific to React and are used to handle errors in React component trees,
+   // while try-catch blocks are a general JavaScript language feature used to handle errors in any JavaScript code.
+
+Component Level vs. Code Block: Error boundaries are applied at the component level in React, 
+    //whereas try-catch blocks are applied around specific blocks of code in JavaScript.
+
+Fallback UI: Error boundaries in React can display a fallback UI when an error occurs, providing a better user experience,
+// while try-catch blocks in JavaScript are primarily used for error handling and do not provide built-in mechanisms for displaying fallback UIs.
